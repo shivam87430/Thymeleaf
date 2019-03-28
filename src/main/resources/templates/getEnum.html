@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Enum</title>
+</head>
+<body>
+<label>Users</label>
+<select>
+    <option th:value="None">Select One</option>
+    <option th:each="users:${T(com.ttn.thymeleaf.SpringThymeleaf.enums.Users).values()}"
+            th:value="${users.getValue()}" th:text="${users.getValue()}"></option>
+</select>
+</body>
+</html>
